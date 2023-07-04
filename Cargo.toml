@@ -4,5 +4,6 @@ members = [
     "ch2",
     "ch3",
     "ch4",
-    "fizzbuzz"
+    "fizzbuzz",
+    "hw2"
 ]
