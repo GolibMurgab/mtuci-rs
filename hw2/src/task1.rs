@@ -13,16 +13,25 @@ It is the same with books. What do we seek through millions of pages?";
 
 
 fn main() {
-    find_term(SEARCH_TERM, QUOTE);
+
+    let i = find_term(SEARCH_TERM, QUOTE);
+    println!("{i}");
 }
 
-fn find_term(search_term: &str, quote: &str)  {
-    let j = search_term.len() - quote.len();
-    for i in 0..j {
-        if quote == &search_term[i..i+quote.len()-1] {
-            println!("{i}");
+fn find_term(search_term: &str, quote: &str) -> String {
+    let mut num = 0;
+    let mut answer=String::new();
+
+    'outer: for i in quote.split("\n"){
+        num += 1;
+        for j in i.split(" ") {
+            if search_term == j {
+                    answer = num.to_string() + ": " + i;
+                    break 'outer;
+                };
         }
     }
+    answer
 }
 
 
