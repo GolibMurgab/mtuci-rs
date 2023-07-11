@@ -10,9 +10,15 @@ struct Victor<T> {
 impl<T> Victor<T> {
     fn new() -> Self {
         Victor {
-            ptr: std::ptr::null_mut(),
+            ptr: ptr::null_mut(),
             len: 0,
             capacity: 0,
         }
     }
+    fn with_capacity() {}
+    fn push() {}
+    fn pop() {}
+    fn remove() {}
+    fn get() {}
+    fn resize() {}
 }
